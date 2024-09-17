@@ -9,21 +9,13 @@
   </head>
   <body>
     <main>
-      <button class="navigate-button" onclick="changeImage()">Go to Next Image</button>
+      <!-- SYD: Got rid of onclick here, we want to do this in our js file -->
+      <button class="navigate-button">Go to Next Image</button>
     </main>
     
     <script src="sketch.js"></script>
     <img id="background-image" src="Images/clicktostartpage.jpg" alt="place holder for own design" class="full-screen-image" />
-    <script>
-      function changeImage() {
-        const img = document.getElementById('background-image');
-        img.style.opacity = 0; // Start fade out
-        setTimeout(() => {
-          img.src = 'Images/topdowngroceryselectyourgroceryitem.jpg'; // Change to the next image
-          img.style.opacity = 1; // Fade in
-        }, 500); // Adjust the timeout to match the transition duration
-      }
-    </script>
+    <!-- SYD: moved the script into sketch.js -->
     <p></p>
   </body>
 </html>
